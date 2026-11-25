@@ -1,0 +1,6 @@
+INSERT INTO tiei_sample_4.machines(
+	name, location, machine_number, short_name, description, enabled, parameters)
+	VALUES ('Laser Cladding', 'Head Line', 'TIZZ303', 'Laser Clad', 'In the laser cladding process, 
+													a thin layer of a material is deposited on a moving substrate 
+													using a laser (as a heat source) and powder injection or wire 
+													feeding (as source material for thin film).', TRUE, 29);

@@ -1,0 +1,92 @@
+to run locally 
+python air_pressure_data_shared.py --os windows --machine_id 1 --local_directory "G:\GOKUL\TOYOTA\Collector_1\2st-Rough"
+
+
+to run as service 
+# Machine 1 (2nd Rough)
+python air_pressure_data_shared.py --os linux --machine_id 1 --ip_address "//10.82.126.26/2nd-rough" --mount_location "/mnt/pressure_data/2nd-rough"
+
+# Machine 2 (4th Finish)  
+python air_pressure_data_shared.py --os linux --machine_id 2 --ip_address "//10.82.126.26/4th-finish" --mount_location "/mnt/pressure_data/4th-finish"
+
+
+for docker 
+python air_pressure_data_shared.py --os linux --machine_id 1 --mount_location "/mnt/pressure_data/2nd-rough" --skip_mount
+
+
+
+
+
+
+in server side 
+sudo mkdir -p /mnt/pressure_data/2nd-rough
+sudo mkdir -p /mnt/pressure_data/4th-finish
+
+
+
+sudo mount -t cifs \
+-o username=<username>,password=<password> \
+"//10.82.126.26/2nd-rough" \
+/mnt/pressure_data/2nd-rough
+
+sudo mount -t cifs \
+-o username=<username>,password=<password> \
+"//10.82.126.26/4th-finish" \
+/mnt/pressure_data/4th-finish
+
+to build
+docker build -t pressure_collector:latest .
+
+
+to run 
+docker run -d \
+  --name pressure_machine_1 \
+  -v /mnt/pressure_data/2nd-rough:/mnt/pressure_data/2nd-rough \
+  pressure_collector:latest \
+  python air_pressure_data_shared.py \
+      --os linux \
+      --machine_id 1 \
+      --mount_location "/mnt/pressure_data/2nd-rough" \
+      --skip_mount
+
+
+in server create env file as below  and pass as argument while running the container
+/home/cmti/pressure_machine.env
+
+example pressure_machine.env 
+DB_HOST=172.18.100.47
+DB_PORT=5432
+DB_NAME=Toyota
+DB_USER=postgres
+DB_PASSWORD=1234
+
+to run with env file in server
+docker run -d \
+  --name pressure_machine_1 \
+  --env-file /home/cmti/pressure_machine.env \
+  -v /mnt/pressure_data/2nd-rough:/mnt/pressure_data/2nd-rough \
+  pressure_collector:latest \
+  python air_pressure_data_shared.py \
+      --os linux \
+      --machine_id 1 \
+      --mount_location "/mnt/pressure_data/2nd-rough" \
+      --skip_mount
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      for disconnectmechanism i changed in docker file and database.py
+
+      docker build -t disconnection_mechanism:latest .
+
+      docker save -o Disconnect_mechanism.tar disconnection_mechanism:latest

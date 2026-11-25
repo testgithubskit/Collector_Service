@@ -1,0 +1,16 @@
+INSERT INTO tiei_sample_4.machine_parameters(
+	name, machine_id, unit_id)
+	VALUES ('MeasurementData(SIDE_AUTO_SIZER)', 60, 6),
+			('MeasurementData(WIDTH_AUTO_SIZER)', 60, 6),
+			('EffectiveCurrent(Z:WHEL_HD_TRVRS)', 60, 6),
+			('PositionDeviation(Z:WHEL_HD_TRVRS)', 60, 6),
+			('EffectiveCurrent(C:WORK_SPINDLE)', 60, 6),
+			('PositionDeviation(C:WORK_SPINDLE)', 60, 6),
+			('MeasurementData(SIDE_AUTO_SIZER)', 60, 6),
+			('MeasurementData(WIDTH_AUTO_SIZER)', 60, 6),
+			('MeasurementData(WHL_SPINDLE_LOAD)', 60, 6),
+			('MeasurementData(AE_GRAPH_SCAL_DP)', 60, 6),
+			('EffectiveCurrent(WL:WK_SPNDL_POS)', 60, 6),
+			('PositionDeviation(WL:WK_SPNDL_POS)', 60, 6),
+			('EffectiveCurrent(WR:FTSTK_SPINDL)', 60, 6),
+			('PositionDeviation(WR:FTSTK SPINDL)', 60, 6);

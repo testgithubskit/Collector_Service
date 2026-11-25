@@ -1,0 +1,288 @@
+# ============================================================
+# Python / FastAPI
+# ============================================================
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+.ENV/
+virtualenv/
+*.venv
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+wheels/
+
+# Python test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Type checkers
+.mypy_cache/
+.pyre/
+.pytype/
+.pyright/
+
+# Ruff
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+# ============================================================
+# FastAPI / Application
+# ============================================================
+
+# Application logs
+logs/
+*.log
+*.log.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Runtime files
+*.pid
+*.pid.lock
+
+
+# ============================================================
+# Environment / Secrets
+# ============================================================
+
+.env
+.env.*
+*.env
+
+# Allow example environment files
+!.env.example
+!.env.template
+!.env.sample
+
+# Secret / credential files
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+secrets/
+credentials/
+
+
+# ============================================================
+# React / Node.js
+# ============================================================
+
+# Dependencies
+node_modules/
+
+# React / frontend build output
+build/
+dist/
+out/
+
+# Vite
+.vite/
+
+# Next.js
+.next/
+.vercel/
+
+# Parcel
+.parcel-cache/
+
+# npm
+.npm/
+npm-debug.log*
+npm-error.log*
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.yarn-integrity
+
+# pnpm
+.pnpm-debug.log*
+.pnpm-store/
+
+
+# ============================================================
+# PostgreSQL
+# ============================================================
+
+# PostgreSQL local database files
+postgres-data/
+postgres_data/
+pgdata/
+pg_data/
+
+# PostgreSQL logs
+postgresql.log
+postgresql-*.log
+
+# PostgreSQL database dumps
+*.dump
+*.backup
+*.bak
+
+
+# ============================================================
+# MongoDB
+# ============================================================
+
+# MongoDB local database files
+mongodb-data/
+mongodb_data/
+mongo-data/
+mongo_data/
+
+# MongoDB logs
+mongod.log
+mongod-*.log
+
+# MongoDB local config
+mongod.conf.local
+
+
+# ============================================================
+# Docker
+# ============================================================
+
+# Docker volumes / local persistent data
+volumes/
+docker-data/
+docker_data/
+
+# Docker override files
+docker-compose.override.yml
+
+# Docker environment files
+docker/.env
+docker/*.env
+
+
+# ============================================================
+# Archives / Compressed files
+# ============================================================
+
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.7z
+*.rar
+
+
+# ============================================================
+# IDE / Editors
+# ============================================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio
+.vs/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+
+# ============================================================
+# Operating System
+# ============================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+
+# ============================================================
+# Frontend caches
+# ============================================================
+
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+
+
+# ============================================================
+# General temporary / backup files
+# ============================================================
+
+*.swp
+*.swo
+*.swn
+*.backup
+*.old
+*.orig
+*.rej
+
+# Temporary editor files
+*.tmp
+*.temp
+
+
+# ============================================================
+# Generated files
+# ============================================================
+
+generated/
+generated-files/
+artifacts/
+reports/
+
+
+# ============================================================
+# Local configuration
+# ============================================================
+
+config.local.*
+settings.local.*

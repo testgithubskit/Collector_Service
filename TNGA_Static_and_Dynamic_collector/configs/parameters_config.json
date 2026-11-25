@@ -1,0 +1,163 @@
+[
+  {
+  
+    "group_name": "APC_BATTERY",
+    "mongodb_query": "apcbatlow(?i)",
+    "latest_update_time": 1655873917,
+    "parameter_type": "bool"
+
+  },
+
+  {
+  
+    "group_name": "CNC_BATTERY",
+    "mongodb_query": "cncbat(?i)",
+    "latest_update_time": 1655873917,
+    "parameter_type": "bool"
+
+  },
+  {
+  
+    "group_name": "SERVO_SPINDLE_MOTOR_TEMPERATURE",
+    "mongodb_query": "\\b[s].*temp(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 50,
+    "critical_limit": 60,
+    "parameter_type": "increasing"
+
+  },
+  {
+  
+    "group_name": "ENCODER_TEMPERATURE",
+    "mongodb_query": "pulse(?i)",
+    "latest_update_time": 1655880900,
+    "warning_limit": 50,
+    "critical_limit": 60,
+    "parameter_type": "increasing"
+
+  },
+  {
+  
+    "group_name": "SERVO_SPINDLE_INSULATION_RESISTANCE",
+    "mongodb_query": "resis(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 50,
+    "critical_limit": 30,
+    "parameter_type": "decreasing"
+
+  },
+  {
+  
+    "group_name": "CNC_FANS",
+    "mongodb_query": ".*cncfan.speed.*(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 5000,
+    "critical_limit": 4500,
+    "parameter_type": "decreasing"
+
+  },
+  {
+  
+    "group_name": "INTERNAL_FAN1_POWER_SUPPLY_SPDN_MOTOR_AMP",
+    "mongodb_query": "infan1sp.*dl.*speed.*(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 5000,
+    "critical_limit": 4500,
+    "parameter_type": "decreasing"
+
+  },
+  {
+  
+    "group_name": "INTERNAL_FAN1_SERVO_AMPLIFIER",
+    "mongodb_query": "infan1srvampspeed.*(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 5000,
+    "critical_limit": 4500,
+    "parameter_type": "decreasing"
+
+  },
+  {
+  
+    "group_name": "INTERNAL_FAN1_POWER_SUPPLY_SERVO_MOTOR",
+    "mongodb_query": "infan1srvcompwspeed.*(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 5000,
+    "critical_limit": 4500,
+    "parameter_type": "decreasing"
+
+  },
+  {
+  
+    "group_name": "INTERNAL_FAN2_POWER_SUPPLY_SPDN_MOTOR_AMP",
+    "mongodb_query": "infan2sp.*dl.*speed.*(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 5000,
+    "critical_limit": 4500,
+    "parameter_type": "decreasing"
+
+  },
+  {
+  
+    "group_name": "INTERNAL_FAN2_SERVO_AMPLIFIER",
+    "mongodb_query": "infan2srvampspeed.*(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 5000,
+    "critical_limit": 4500,
+    "parameter_type": "decreasing"
+
+  },
+  {
+  
+    "group_name": "INTERNAL_FAN2_POWER_SUPPLY_SERVO_MOTOR",
+    "mongodb_query": "infan2srvcompwspeed.*(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 5000,
+    "critical_limit": 4500,
+    "parameter_type": "decreasing"
+
+  },
+  {
+  
+    "group_name": "BATTERY_ZERO_SEPERATE_DETECTOR",
+    "mongodb_query": "\\bspdbatzero.*(?i)",
+    "latest_update_time": 1655873917,
+    "parameter_type": "bool"
+
+  },
+  {
+  
+    "group_name": "BATTERY_ZERO_SERIAL_SEPERATE_DETECTOR",
+    "mongodb_query": "\\bsspdbatzero.*(?i)",
+    "latest_update_time": 1655873917,
+    "parameter_type": "bool"
+
+  },
+  {
+  
+    "group_name": "RADIATOR_FAN1_SERVO_SPINDLE_AMPLIFIER",
+    "mongodb_query": "radfan1s.*ampspeed.*(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 5000,
+    "critical_limit": 4500,
+    "parameter_type": "decreasing"
+
+  },
+  {
+  
+    "group_name": "RADIATOR_FAN2_SERVO_SPINDLE_AMPLIFIER",
+    "mongodb_query": "radfan2s.*ampspeed.*(?i)",
+    "latest_update_time": 1655873917,
+    "warning_limit": 5000,
+    "critical_limit": 4500,
+    "parameter_type": "decreasing"
+
+  },
+  {
+  
+    "group_name": "DYNAMIC_PARAMETERS",
+    "mongodb_query": "load(?i)",
+    "latest_update_time": 1648205545,
+    "parameter_type": "increasing"
+
+  }
+]

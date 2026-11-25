@@ -1,0 +1,14 @@
+INSERT INTO tiei_sample_4.units(
+	name, short_name, description, type)
+	VALUES  ('millimeter per minute', 'mm/min', 'Used to denote speed of components, such as fan speed', 'speed'),
+			('watt', 'W', 'Used to power consumption', 'power'),
+			('millisecond', 'ms', 'this is used to denote time in milli seconds', 'time'),
+			('grams per second', '0.01g/s', 'this is used to weight flow rate', 'flow_rate'),
+			('degree', '0.01deg', 'this is used to denote angular position', 'position'),
+			('no_units', 'none', 'this is used for cases where there is no units', 'none'),
+			('kilo_pascal', '0.01KPa', 'this is used to denote pressure in kilo pascal', 'pressure'),
+			('liters per minute', 'L/min', 'this is used to denote flow rate in liters per minute', 'flow_rate'),
+			('0.1 millisecond', '0.1ms', 'Used to denote time in 0.1 milli second', 'time'),
+			('0.01 grams', '0.01g', 'Used to denote time in 0.01 grams', 'weight'),
+			('10 watt', '10W', 'Used to denote 10 watt power consumption', 'power'),
+			('Microns', 'microns', 'Used to denote length in microns', 'length');

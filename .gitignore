@@ -1,0 +1,17 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+*.log
+.DS_Store
+TOYOTA/
+.idea/
+.vscode/
+
+# secrets / local env (do not commit)
+**/credentials.json
+**/.env
+**/.env_email
+**/.env_email_amazon
+**/*password*

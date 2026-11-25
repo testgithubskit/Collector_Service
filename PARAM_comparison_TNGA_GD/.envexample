@@ -1,0 +1,26 @@
+# LOCALHOST PARAMS
+LOCALHOST_SCHEMA=tiei_sample_5
+LOCALHOST_DB_HOST=172.18.7.27
+LOCALHOST_DB_PORT=5433
+LOCALHOST_DB_USER=postgres
+LOCALHOST_DB_PASSWORD=password
+LOCALHOST_DB_NAME=postgres
+LOCALHOST_MONGO_URL=mongodb://localhost:27017/
+
+# TNGA PLANT PARAMS
+TNGA_SCHEMA=tiei_sample_4
+TNGA_DB_HOST=10.82.126.43
+TNGA_DB_PORT=5435
+TNGA_DB_USER=tnga_iot
+TNGA_DB_PASSWORD=Toyota_2026
+TNGA_DB_NAME=tiei_test
+TNGA_MONGO_URL=mongodb://tngaIoT:Toyota2022@10.82.126.72:27017/?authSource=MTLINKi&readPreference=primary&directConnection=true&ssl=false
+
+# GD PLANT PARAMS
+GD_SCHEMA=tiei_gd_plant_1
+GD_DB_HOST=10.82.126.43
+GD_DB_PORT=5435
+GD_DB_USER=tnga_iot
+GD_DB_PASSWORD=Toyota_2026
+GD_DB_NAME=tiei_test
+GD_MONGO_URL=mongodb://electrono:elno123@10.82.126.48:27017/?authSource=MTLINKi&readPreference=primary&directConnection=true&ssl=false

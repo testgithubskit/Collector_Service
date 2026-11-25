@@ -1,0 +1,100 @@
+change database credential in 2 places that is 
+Configs/.env
+collector_app/database/__init__.py
+then build docker image and run the container for static collector
+docker build -t collector-static:1.0 . 
+docker run -d --name collector-static collector-static:1.0
+then change the docker file for dynamic collector
+docker build -t collector-dynamic:1.0 . 
+docker run -d --name collector-dynamic collector-dynamic:1.0
+
+
+
+
+
+Add collector-static.env in server(/home/cmti/collector-static.env) with below details 
+TIMESCALEDB_PROVIDER="postgres"
+
+TIMESCALEDB_USER="tnga_iot"
+# TIMESCALEDB_USER="postgres"
+
+TIMESCALEDB_PASSWORD="Toyota_2026"
+# TIMESCALEDB_PASSWORD="siri2251105"
+
+TIMESCALEDB_HOST="10.82.126.43"
+# TIMESCALEDB_HOST="host.docker.internal"
+# TIMESCALEDB_HOST="172.18.100.156"
+
+TIMESCALEDB_DATABASE="tiei_test"
+# TIMESCALEDB_DATABASE="Toyota_server"
+
+TIMESCALEDB_PORT=5435
+
+MONGODB_URL="mongodb://tngaIoT:Toyota2022@10.82.126.72:27017/?authSource=MTLINKi&readPreference=primary&directConnection=true&ssl=false"
+# MONGODB_URL="mongodb://host.docker.internal:27017"
+# MONGODB_URL="mongodb://localhost:27017"
+
+LOGGER_CONFIGURATION_FILE="./configs/log.json"
+
+
+
+
+
+
+to run with environment variables
+
+docker run -d --name collector-static --env-file /home/cmti.thejas/CMTI/collector-static.env collector-static:1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Max and Min connection count for the database connection pool
+# MAX_CONNECTIONS_COUNT = 10
+# MIN_CONNECTIONS_COUNT = 10
+#
+# MONGODB_URL = os.getenv("MONGODB_URL", "")  # deploying without docker-compose
+#
+# # If the mongodb url is not defined in os environment, then do the following
+# if not MONGODB_URL:
+#
+#     # Load the database connection credentials from the file.
+#     credentials_data = load_database_credentials()
+#
+#     # Create the mongodb database url string
+#     MONGODB_URL = DatabaseURL(
+#         f"mongodb://{credentials_data['user']}:{credentials_data['password']}@{credentials_data['host']}:"
+#         f"{credentials_data['port']}/{credentials_data['database']}"
+#     )
+#MONGODB_URL = "mongodb://172.25.208.66:27017"
+# MONGODB_URL = "mongodb://username:password@host:port/?authSource=MTLINKi&read" \
+#               "Preference=primary&directConnection=true&ssl=false"
+#MONGODB_URL = "mongodb://localhost:27017"
+#TIMESCALEDB_URL = "postgres://postgres:password@localhost:5432/tiei_test"
+#PARAMETER_CONFIG = "D:\\PS-CMTI\\Codes\\PycharmProjects\\TIEI Master\\collector\\collector_main\\configs\\"
+MONGODB_URL = "mongodb://tngaIoT:Toyota2022@10.82.126.72:27017/?authSource=MTLINKi&read" \
+              "Preference=primary&directConnection=true&ssl=false"
+# MONGODB_URL = "mongodb://host.docker.internal:27017"
+# MONGODB_URL = "mongodb://localhost:27017"
+TIMESCALEDB_URL = "postgres://tnga_iot:Toyota_2026@10.82.126.43:5435/tiei_test"
+# TIMESCALEDB_URL = "postgres://postgres:siri2251105@host.docker.internal:5432/Toyota_server"
+# TIMESCALEDB_URL = "postgres://postgres:siri2251105@172.18.100.156:5432/Toyota_server"

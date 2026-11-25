@@ -1,0 +1,24 @@
+TIMESCALEDB_PROVIDER=postgres
+
+TIMESCALEDB_USER=tnga_iot
+
+TIMESCALEDB_PASSWORD=Toyota_2026
+
+TIMESCALEDB_HOST=10.82.126.43
+
+TIMESCALEDB_DATABASE=tiei_test
+
+TIMESCALEDB_URL=postgres://tnga_iot:Toyota_2026@10.82.126.43:5435/tiei_test 
+
+LOGGER_CONFIGURATION_FILE=configs\\log.json
+
+SECRET_KEY="09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
+
+# Mongodb Database user
+MONGODB_USER=tngaIoT
+
+# Mongodb Database password for user
+MONGODB_PASSWORD=Toyota2022
+
+# Mongodb Database host identifierq
+MONGODB_HOST=10.82.126.72
